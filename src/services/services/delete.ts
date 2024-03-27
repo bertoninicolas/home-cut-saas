@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 const deleteService = async (formData: FormData) => {
   const service = await prisma.service.delete({
     where: {
-      id: Number(formData.get("id")),
+      id: Number(formData.get("serviceId")),
     },
   });
 
